@@ -1,122 +1,118 @@
 ---
 name: "natural-writing"
-description: "Use when writing or editing any prose (articles, emails, posts, docs, essays) in English or Russian, to avoid patterns that make text read as AI-generated."
+description: "Use when writing or editing prose meant for people to read (articles, blog posts, social posts, emails, newsletters, product and landing pages, essays) in English or Russian, or when asked to make text sound less AI-written, humanize it, or check it for AI tells. Написать или отредактировать текст, статью, пост, письмо, карточку товара; убрать признаки нейросети. Not for code, commit messages or API docs."
 ---
 
-# Natural writing: avoiding AI-writing patterns
+# Natural writing
 
-Based on Wikipedia's "Signs of AI writing" field guide. The goal is not to disguise text but to write better: specific, plain, accurate. Surface fixes alone are not enough. The deeper problem these signs point to is generic, inflated, poorly sourced content. Fix that first.
-
-## Core principle
-Prefer the specific fact over the generic claim. "Inventor of the first train-coupling device" beats "a revolutionary titan of industry". If a sentence could describe a hundred different subjects, rewrite it or cut it.
-
-When the facts are missing (numbers, names, dates, what actually happened), ask the user for them. Don't fill the gap with generic sentences, and never invent details to sound concrete.
+Based on Wikipedia's "Signs of AI writing" field guide plus editing practice. The goal is not to disguise text but to write better: specific, plain, accurate, worth reading. The deeper problem behind AI tells is generic, inflated, poorly sourced content. Fix that first.
 
 ## Priorities
 1. The reader wants to keep reading. A text that is correct but dull has failed.
 2. It doesn't read as AI-written.
-3. Only for web pages, and only when the user says the text should rank or be cited: the SEO and AI-search sections below. If one of their rules makes the text worse for a person, drop the rule.
+3. Only for web pages, and only when the user says the text should rank or be cited: read `references/web.md`. If one of its rules makes the text worse for a person, drop the rule.
 
-The rules in this skill are a checklist for editing, not a recipe for writing. Don't apply them so hard that the text turns into a list of facts.
+The rules below are a checklist for editing, not a recipe for writing. Don't apply them so hard that the text turns into a list of facts.
+
+## Core principle
+Prefer the specific fact over the generic claim. "Inventor of the first train-coupling device" beats "a revolutionary titan of industry". If a sentence could describe a hundred different subjects, rewrite it or cut it.
+
+**Facts come from the user or a source, never from you.** Don't invent people, companies, statistics, quotes, product details or the author's experience ("I tried", "we had") to make a text vivid. An invented vignette ("Sarah, a manager in Austin…", «Анна из Казани…») and a round number without a source ("73% of users") are themselves AI tells. If you derive a number, say what it's a share of.
+
+**When facts are missing:** if a missing fact is central and you're in a conversation, ask. Otherwise write from what you have and list the gaps in one line after the deliverable, outside it.
+
+## Before drafting
+Decide three things: who reads this, the one thing they should take away, and the most unexpected or useful thing in the material. Start near that.
 
 ## What makes a text interesting
 - **A point of view.** Say what you think and why; take a side when there is one.
-- **A real example or a story.** One case with a name, a place, a mistake, a number does more than three general claims.
+- **A real example.** One case the user gave you, or one from a source, does more than three general claims. A hypothetical is fine if it's framed as one ("say you're a couple with a kid").
 - **Something the reader didn't know.** A surprising detail, a counterintuitive result, an honest "it didn't work".
-- **Movement.** A question at the start that the text answers; a problem, then what was tried.
-- **A human voice.** Humor, doubt, an aside are fine where the author would use them.
+- **Movement.** A problem, then what was tried; a question the text actually answers (not a rhetorical hook like "Ever wondered…?", «Знакомая ситуация?»).
+- **A human voice.** Humor, doubt, an aside, where the author's samples or the situation call for it. Forced humor and confessional asides read as fake.
+- **An ending that does something.** End on what the reader does or decides next (order, reply, which model to pick), on your verdict, or on the last strong fact. Don't restate the text, and don't just stop on the last item either.
+- **Genre.** A post, an email, an article and a product page differ in length, in how directly they address the reader and in how much personal there is. Match the genre.
 
 ## Match the author's voice
-If the user has shared their own writing (earlier posts, emails, a sample paragraph), match it: their sentence length, word choice, punctuation habits, how formal they are, whether they use "I". For a recurring kind of text without a sample, ask for 2–3 paragraphs the user wrote themselves. Their voice beats any rule below; if they write long sentences or use dashes, keep that.
+If the user has shared their own writing (earlier posts, emails, a sample paragraph), match it: sentence length, word choice, punctuation habits, formality, whether they use "I". For a recurring kind of text without a sample, ask once for 2–3 paragraphs they wrote. Their voice beats any rule below; if they write long sentences or use dashes, keep that.
 
 ## Content: don't do this
-1. **Inflating significance.** No "stands as a testament", "pivotal moment", "plays a key role", "evolving landscape", "indelible mark", "reflects broader trends", "setting the stage for". Russian: «играет ключевую роль», «знаковый момент», «неизгладимый след», «свидетельство того, что». State what happened; let the reader judge importance.
-2. **Bragging about coverage.** Don't list outlets a subject "was featured in" or say "maintains an active social media presence". Summarize what sources actually say.
-3. **Tacked-on analysis.** Don't end sentences with "-ing" commentary: "highlighting its importance", "underscoring", "reflecting", "fostering", "contributing to". Russian: «подчёркивая важность», «что свидетельствует о…».
-4. **Promotional tone.** Blatant ad copy is mostly an older-model tell now, but still avoid "vibrant", "rich", "nestled", "in the heart of", "boasts", "groundbreaking", "renowned", "diverse array", "natural beauty". Russian: «уникальный», «живописный», «богатое наследие», «раскинувшийся», «настоящая жемчужина».
-5. **Vague connections.** Write "was CEO of X", not "was associated with leadership of X" or "connected with".
-6. **Weasel attributions.** No "experts argue", "observers note", "several sources" unless you name them and there really are several. Don't present one source's view as widely held.
-7. **Template structure.** Don't build every text as intro → list of points → conclusion. Start with the point, let the order follow the material, and stop when you're done. A short email or post needs no headings and usually no bullets.
-8. **Formulaic endings.** No "Despite its successes, X faces challenges…" followed by an upbeat forecast. No "Challenges and Future Outlook" sections by reflex.
-9. **Summary conclusions.** Mostly an older-model habit, but don't end paragraphs or texts with "In summary", "Overall", "In conclusion" restating what was just said. Russian: «Таким образом», «В заключение», «Подводя итог».
+- **Inflating significance.** "Stands as a testament", "pivotal moment", "plays a key role", "evolving landscape", "indelible mark", "reflects broader trends", "setting the stage for". Russian: «играет ключевую роль», «знаковый момент», «неизгладимый след», «свидетельство того, что». State what happened; let the reader judge importance.
+- **Bragging about coverage.** Don't list outlets a subject "was featured in" or say "maintains an active social media presence". Summarize what sources actually say.
+- **Tacked-on analysis.** "-ing" commentary at the end of a sentence: "highlighting its importance", "underscoring", "reflecting", "fostering", "contributing to". Russian: «подчёркивая важность», «что свидетельствует о…».
+- **Promotional tone.** "Vibrant", "rich", "nestled", "in the heart of", "boasts", "groundbreaking", "renowned", "diverse array". Russian: «уникальный», «живописный», «богатое наследие», «настоящая жемчужина», «широкий ассортимент».
+- **Vague connections.** Write "was CEO of X", not "was associated with leadership of X".
+- **Weasel attributions.** "Experts argue", "observers note", "several sources" unless you name them and there really are several.
+- **Template structure.** Every text as intro → list of points → conclusion, or a section per parameter. Start with the point and let the order follow the material. A short email or post needs no headings; a short list of 3–5 specs inside a prose post is fine.
+- **Formulaic endings.** "Despite its successes, X faces challenges…" plus an upbeat forecast; "Challenges and Future Outlook" by reflex; a closing question like "What will you build?".
+- **Summary conclusions.** "In summary", "Overall", "In conclusion", "Key takeaways", "TL;DR" restating a text under ~1500 words. Russian: «Таким образом», «В заключение», «Подводя итог», «Главное:», «Вывод:».
+- **Answering what nobody asked.** A "Why this matters" section, definitions of the obvious.
+- **Even-handedness by reflex.** One paragraph per side, every thought closed off, no loose end anywhere.
 
 ## Language: don't do this
-10. **AI vocabulary clusters.** Watch for: additionally (sentence-initial), align with, bolster, crucial, delve, deep dive, emphasize, enduring, enhance, foster, garner, highlight (verb), interplay, intricate, landscape (abstract), leverage, meticulous, multifaceted, pivotal, robust, seamless, showcase, tapestry, testament, underscore, valuable, vibrant. Newer models favor: leverage, prioritize, practical, dependable, steady, quietly, clearer, matters, universally, "challenge". Also overused across models: navigate, realm, embark, journey (abstract), resonate, nuanced, unwavering, palpable, game-changer, "a testament to", "in today's fast-paced world". Word lists age: models drop a word once it becomes a known tell ("delve" fell after 2024) and others keep rising ("significant"). Treat the list as examples of the habit, which is reaching for the impressive word over the plain one. One is fine; several together is a tell. Russian: «кроме того» в начале каждого абзаца, «погрузиться в», «многогранный», «ключевой», «неотъемлемый», «важно отметить», «играет важную роль», «в современном мире».
-11. **Avoiding plain "is/has".** Write "is", "has", "was". Not "serves as", "stands as", "functions as", "represents", "features", "offers", "boasts". Russian: «является» is fine sparingly; avoid «выступает в качестве», «представляет собой» when «это» works.
-12. **Negative parallelisms.** Limit "not just X, but Y", "it's not X — it's Y", "Y rather than X", "no X, no Y, just Z". Russian: «это не просто X, а Y», «не X, а Y». Use only when correcting a real misconception.
-13. **Rule of three.** Don't default to triplets of adjectives or phrases. Use the number of items the content actually has.
-14. **Elegant variation.** Repeating the right word is fine. Don't cycle synonyms to avoid repetition (an older-model tell; non-native writers do it too).
-15. **Stiff synonyms.** Prefer wrote/moved/used/tried/died over authored/relocated/utilized/attempted/passed away.
-16. **Over-hedging disclaimers.** No "it's important to note", "while specific details are limited", "based on available information", "should be treated as X rather than Y", "does not by itself establish". If information is missing, either say so once plainly or leave the gap. Never speculate about what it "likely" is.
+- **AI vocabulary clusters.** For example: additionally (sentence-initial), align with, bolster, crucial, delve, emphasize, enduring, enhance, foster, garner, highlight (verb), interplay, intricate, landscape (abstract), leverage, meticulous, multifaceted, navigate, pivotal, realm, resonate, robust, seamless, showcase, tapestry, testament, underscore, unlock, lean into, game-changer, "the real X", "here's the kicker". Russian: «погрузиться в», «многогранный», «ключевой», «неотъемлемый», «играет важную роль», «позволяет», «обеспечивает», «способствует», «широкий спектр». The list is examples of a habit: reaching for the impressive word over the plain one. Lists age (models drop a word once it's a known tell). One is fine; several together is a tell. Don't swap a listed word for a synonym; rebuild the sentence or say it plainly.
+- **Avoiding plain "is/has".** Not "serves as", "stands as", "functions as", "boasts". "Offers" or "features" is fine when it's the plain word. Russian: avoid «выступает в качестве», «представляет собой» when «это» works.
+- **Negative parallelisms and mirrored pairs.** "Not just X, but Y", "it's not X — it's Y", "no X, no Y, just Z", and mirrored sentences built for effect: "That explains X. It doesn't excuse Y.", "With X, it… With Y, it…", "It wasn't X. It was Y." Russian: «это не просто X, а Y», «это не про X, это про Y». At most one per text, and only for a real contrast.
+- **Rule of three.** Triplets by default, including fragment triplets ("No fluff. No filler. Just results."). Use the number of items the content has.
+- **Stiff synonyms.** Prefer wrote/moved/used/tried/died over authored/relocated/utilized/attempted/passed away. Repeating the right word is fine; don't cycle synonyms.
+- **Hedging as insurance.** "It's important to note", "while specific details are limited", "based on available information". Real doubt is fine when stated plainly: "I think it's the firmware, but I haven't checked."
+- **Punchy staccato.** One-line paragraphs, fragments for effect ("And it worked. Mostly."), a colon reveal ("The result? Chaos.", «Итог: …»), a punchline closing every paragraph. Russian: «И это работает.», «Спойлер: …».
+
+## Rhythm and punctuation
+Let sentence length follow the thought: a long sentence where the idea needs qualifying, a short one where the point is short. Don't engineer rhythm; both a metronome of 15–20-word sentences and a manufactured mix of fragments are tells. Use the punctuation the sentence needs, not a quota: no em dashes as a punchline device in English, but in Russian put a dash wherever the rules require it («Главное изменение — залив воды»), and don't twist the sentence to avoid it.
 
 ## Formatting: don't do this
-17. **Title Case In Every Heading.** Use sentence case.
-18. **Boldface everywhere.** Bold at most a key term or two; never every instance of a phrase.
-19. **"**Label:** text" bullet lists** as the default structure. Use prose when the content is an argument or narrative.
-20. **Emoji as bullets or heading decoration.**
-21. **Tiny tables** that would read better as a sentence.
-22. **Punctuation.** Em dashes (esp. spaced, in "punched-up" clauses) were a strong tell, but newer models suppress them, and text of only commas and periods is now a tell too. Use dashes sparingly and mix commas, parentheses, colons, periods naturally.
-23. **Uniform sentence rhythm.** Vary sentence length for real: put a three-word sentence next to a forty-word one, make paragraphs uneven, allow a fragment or an aside where speech would have one. Avoid every sentence landing at 8–20 words and every paragraph at 3–4 sentences.
-24. **Headings for short answers**, a title heading repeating the document name, skipped heading levels, empty headings that only contain subheadings.
+- **Title Case In Headings**, and titles shaped "Catchy phrase: explanation". Use sentence case.
+- **Boldface everywhere.** Bold at most a key term or two.
+- **"Label: text" bullet lists** as the default structure. Use prose for arguments and narratives.
+- **Emoji** as bullets or heading decoration.
+- **Tiny tables** that would read better as a sentence.
+- **Headings in short texts**, a heading repeating the title, empty headings, a bold summary paragraph at the top.
+- **Markdown where the format is plain text** (`**`, `###`, "1." in an email or a form).
 
 ## English specifics
-- **Corporate filler.** "In order to", "utilize", "at this point in time", "facilitate", "going forward", "on a daily basis". Write "to", "use", "now", "help", "later", "daily".
-- **Nominalizations.** "Conduct an analysis", "perform optimization", "drive engagement". Use the verb: "we analyzed", "made it faster", "people started commenting".
-- **Signposting.** "Let's dive in", "let's break it down", "here's the thing", "the key takeaway", "it's worth noting", "at the end of the day". The sentence usually works without them.
-- **Even tone.** AI English stays upbeat and equally polite throughout. Real writing allows a plain opinion, a dry aside, a short blunt sentence, contractions where the register permits.
-- **Consistency.** Pick US or UK spelling and stick to it; same for the serial comma and for straight vs curly quotes.
+- **Corporate filler.** "In order to", "utilize", "at this point in time", "facilitate", "on a daily basis". Write "to", "use", "now", "help", "daily".
+- **Nominalizations and passive.** "Conduct an analysis", "drive engagement", "it was decided". Use the verb and the actor: "we analyzed", "people started commenting", "we decided".
+- **Signposting.** "Let's dive in", "let's break it down", "the key takeaway", "it's worth noting", "Here's why:", "Imagine…", "In a world where…", "Whether you're X or Y…". "Here's the thing" or "honestly" at most once.
+- **Even tone.** AI English stays upbeat and equally polite throughout. Real writing allows a plain opinion, a dry aside, contractions where the register permits.
+- **Consistency.** US or UK spelling, serial comma, quote style: pick one and keep it.
 
 ## Russian specifics
-- **Канцелярит.** «В рамках», «в целях реализации», «осуществлять», «данный», «в соответствии с вышеизложенным», «на сегодняшний день». Пишите «чтобы», «делать», «этот», «сейчас».
-- **Отглагольные существительные.** «Проведение анализа», «оптимизация процессов», «вовлечение аудитории». Глагол лучше: «проанализировали», «ускорили», «люди стали комментировать».
-- **Связки-штампы.** «Стоит отметить», «важно подчеркнуть», «следует учитывать», «не секрет, что», «давайте разберёмся», «в современном мире». Обычно предложение работает без них.
-- **Ровный тон.** Нейросетевой русский гладкий и одинаково вежливый от начала до конца. Живой текст допускает разговорное слово, короткое резкое предложение, личную оценку.
-- **Типографика.** Кавычки «ёлочки», тире там, где его ставит русская пунктуация (между подлежащим и сказуемым, при пояснении), а не английское тире для эффекта. Буква «ё» либо везде, либо нигде.
-
-## Web and SEO texts
-Only when the user says the text is for a site and should rank. Priority 1 still wins.
-Search engines (Google, Yandex) don't rank text down for being AI-written. They demote scaled, low-value content: many near-identical pages, filler that answers nothing, no sign of first-hand knowledge. So for pages meant to rank:
-- **Add what only this author has.** Own numbers, test results, photos, prices, cases, "we tried X and Y happened". Ask the user for them; this is the main ranking signal you can't fake.
-- **Answer the query in the first lines.** Then detail. No warm-up paragraph about why the topic matters.
-- **Show who wrote it and why they know.** Name, role, experience, if the user provides them.
-- **Don't template a series.** When writing many similar pages (cities, products, categories), make each one differ in facts, not just in swapped names.
-- **No keyword stuffing.** Use the query phrase where it reads naturally; synonyms and related terms are fine.
-- Russian: то же для Яндекса — уникальные данные, ответ сразу, без «В этой статье мы рассмотрим…».
-
-## Texts meant to be cited by AI search
-Only when the user asks for it. Apply these to a few key passages (a definition, a price, a comparison), not to the whole text; the rest stays a text for people.
-AI answer engines (ChatGPT search, Perplexity, Google AI Overviews, Яндекс Нейро) quote short passages that make sense on their own. For web pages that should be cited:
-- **Self-contained answers.** Right after a question, give the answer in 1–2 sentences that are clear without the surrounding text: name the subject instead of "it" or "this".
-- **Exact facts.** Numbers, dates, model names, prices, units. Vague claims don't get quoted.
-- **Questions as subheadings** on longer pages: "How much does X cost", "X vs Y". Use them on long pages only, not in short texts.
-- **Comparisons and specs in a table** when there are several items with the same attributes. That's a table doing real work, not a tiny one.
-- Everything above still applies: a quotable answer written in AI style is still AI style.
+- **Канцелярит.** «В рамках», «в целях реализации», «осуществлять», «данный», «на сегодняшний день». Пишите «чтобы», «делать», «этот», «сейчас».
+- **Отглагольные существительные и цепочки родительного.** «Повышение эффективности работы отдела продаж компании». Лучше глагол и конкретика: «перестроили закупку, и заказ приходит за два дня вместо пяти».
+- **Пассив и безличность.** «Было принято решение», «осуществляется доставка» → «мы решили», «доставляем».
+- **«Позволяет», «обеспечивает», «способствует».** «Сервис позволяет экономить время» → «с сервисом вы тратите меньше времени».
+- **Связки-штампы.** «Стоит отметить», «важно понимать», «не секрет, что», «давайте разберёмся», «давайте честно», «и вот тут начинается самое интересное», «звучит знакомо?», «представьте:», «простыми словами», «по сути» и «на самом деле» в каждом абзаце, «в современном мире».
+- **Кальки.** «Адресовать проблему», «в конце дня», лишние «свой/его» («открыл свой ноутбук»), «является» и «который» цепочками, новое в начале фразы по английской схеме вместо конца.
+- **Ровный тон.** Нейросетевой русский гладкий и одинаково вежливый. Живой текст допускает разговорное слово, резкое короткое предложение, личную оценку.
+- **Типографика.** «Ёлочки», тире по правилам русской пунктуации (не дефис и не английское тире без пробелов). «Ё» либо везде, либо нигде, но в «всё/все» и подобных — всегда. «Вы» с заглавной только в личном письме.
 
 ## Chat residue in deliverables
-25. When producing text the user will publish or send, never include assistant talk inside it: "I hope this helps", "Certainly!", "Here is a…", "Let me know if…", "Would you like…", "check before publishing", notes to reviewers.
-26. No unfilled placeholders ([Your Name], 2025-XX-XX, PASTE_URL_HERE). If something is unknown, ask or mark it clearly outside the deliverable.
-27. Use the target format's markup (e.g., wikitext for Wikipedia, plain text for a form) rather than Markdown by habit. Prefer straight quotes and apostrophes over curly ones where the format expects them.
+- No assistant talk inside text the user will publish or send: "I hope this helps", "Certainly!", "Here is a…", "Let me know if…", notes to reviewers.
+- No unfilled placeholders ([Your Name], 2025-XX-XX, PASTE_URL_HERE).
+- Use the target format's markup (plain text for a form, wikitext for Wikipedia). Straight quotes only where the format needs them (code, wikitext, forms).
+- Customer-service formulas are about *your own* replies ("I have carefully reviewed", "apologies for any inconvenience"). In a customer-facing letter where the company was at fault, a plain "I'm sorry" / «Извините» is required.
 
-## Citations
-28. Only cite sources that exist and that you have actually seen. Every link must resolve; every claim must be in the cited source. Include page numbers for books when known.
-29. Strip tracking parameters (utm_source=chatgpt.com, utm_source=openai, etc.) from URLs.
+## Citations and edit summaries
+- Only cite sources that exist and that you have seen. Every link must resolve; every claim must be in the cited source.
+- Strip tracking parameters (utm_source=chatgpt.com, utm_source=openai) from URLs.
+- Describe changes concretely ("added 2019 album release"), not boilerplate ("improved clarity and flow"). Don't list what you didn't change.
 
-## Edit summaries and meta-commentary
-30. Describe what changed concretely ("added 2019 album release"), not boilerplate ("improved clarity, flow, and neutrality per guidelines; preserved references"). Don't list what you didn't change.
-31. Don't sound like customer service: no "I have carefully reviewed", "apologies for any inconvenience".
+## About AI detectors
+Classifiers (Pangram, GPTZero, Turnitin, Originality) are trained on model output and mostly ignore surface fixes. These rules help with human readers and LLM judges, not with them. What lowers a detector score is real human input: the user's facts, their sentences, their edits. When it matters, suggest the user rewrite the opening and key passages in their own words. Never add typos or odd words to fool a detector.
 
 ## Final check before delivering
-Write the draft, then audit it as an editor who suspects AI: go through the rules above, note every tell you find, and rewrite those spots. For anything longer than a few paragraphs, do this as a separate pass, not while drafting. Ask:
+**Short texts** (an email, a post under ~200 words): check chat residue, vocabulary clusters, mirrored pairs, and that the first line is the point and the last line does something. If nothing turns up, deliver as is.
+
+**Longer texts:** after drafting, reread as an editor who suspects AI, as a separate pass:
 - What does each paragraph tell the reader that they didn't know? If nothing, cut it.
 - Could the first paragraph go without loss? If so, start with the second.
-- Is there at least one concrete case (a name, a place, a number, what happened), not only general claims?
-- Pick the dullest paragraph. There always is one, so don't skip this; rewrite it or cut it.
+- Is there at least one concrete case, and did it come from the user or a source?
+- Find the weakest paragraph. If it adds nothing, cut it; if it does, make it specific.
 - Could any sentence apply equally to a different subject? Make it specific or cut it.
-- Are there 3+ words from the vocabulary list in one paragraph? Rewrite.
-- Does any paragraph end by restating its own point? Cut the last sentence.
+- Are there 3+ vocabulary-list words, or more than one mirrored pair or punchy fragment, in the text? Rewrite.
+- Does the ending tell the reader what to do or think, without restating?
 - Is formatting (bold, bullets, headings) doing real work, or decorating?
-- Is every claim traceable to a real source or the user's own input?
 - Does it sound like the user's samples, if you have them?
-- Read the sentence lengths aloud in your head: is there a rhythm, or a metronome?
 
-Don't over-correct: perfect grammar, formal register, and transition words are not problems in themselves. The aim is clear, specific writing, not avoiding a word list at all costs.
+Don't over-correct: perfect grammar, formal register and transition words are not problems in themselves. The aim is clear, specific writing, not avoiding a word list at all costs.

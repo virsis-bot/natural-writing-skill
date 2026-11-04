@@ -20,6 +20,15 @@ rm -f CHANGES.md
 claude -p "$(cat scripts/update_prompt.md)" --model sonnet \
   --allowedTools "Read,Edit,Write,Glob,Grep" </dev/null >/dev/null
 
+if ! python3 scripts/validate_skill.py; then
+  # Throw away the update and the snapshot so tomorrow's run retries it
+  git checkout -q -- skills/ source/
+  git clean -fdq -- skills/
+  rm -f CHANGES.md
+  echo "update rejected"
+  exit 1
+fi
+
 if git diff --quiet -- skills/; then
   git add source/
   git commit -qm "Update article snapshot (no skill changes)"
