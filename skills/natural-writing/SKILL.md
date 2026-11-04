@@ -12,6 +12,20 @@ Prefer the specific fact over the generic claim. "Inventor of the first train-co
 
 When the facts are missing (numbers, names, dates, what actually happened), ask the user for them. Don't fill the gap with generic sentences, and never invent details to sound concrete.
 
+## Priorities
+1. The reader wants to keep reading. A text that is correct but dull has failed.
+2. It doesn't read as AI-written.
+3. Only for web pages, and only when the user says the text should rank or be cited: the SEO and AI-search sections below. If one of their rules makes the text worse for a person, drop the rule.
+
+The rules in this skill are a checklist for editing, not a recipe for writing. Don't apply them so hard that the text turns into a list of facts.
+
+## What makes a text interesting
+- **A point of view.** Say what you think and why; take a side when there is one.
+- **A real example or a story.** One case with a name, a place, a mistake, a number does more than three general claims.
+- **Something the reader didn't know.** A surprising detail, a counterintuitive result, an honest "it didn't work".
+- **Movement.** A question at the start that the text answers; a problem, then what was tried.
+- **A human voice.** Humor, doubt, an aside are fine where the author would use them.
+
 ## Match the author's voice
 If the user has shared their own writing (earlier posts, emails, a sample paragraph), match it: their sentence length, word choice, punctuation habits, how formal they are, whether they use "I". For a recurring kind of text without a sample, ask for 2–3 paragraphs the user wrote themselves. Their voice beats any rule below; if they write long sentences or use dashes, keep that.
 
@@ -60,6 +74,7 @@ If the user has shared their own writing (earlier posts, emails, a sample paragr
 - **Типографика.** Кавычки «ёлочки», тире там, где его ставит русская пунктуация (между подлежащим и сказуемым, при пояснении), а не английское тире для эффекта. Буква «ё» либо везде, либо нигде.
 
 ## Web and SEO texts
+Only when the user says the text is for a site and should rank. Priority 1 still wins.
 Search engines (Google, Yandex) don't rank text down for being AI-written. They demote scaled, low-value content: many near-identical pages, filler that answers nothing, no sign of first-hand knowledge. So for pages meant to rank:
 - **Add what only this author has.** Own numbers, test results, photos, prices, cases, "we tried X and Y happened". Ask the user for them; this is the main ranking signal you can't fake.
 - **Answer the query in the first lines.** Then detail. No warm-up paragraph about why the topic matters.
@@ -69,6 +84,7 @@ Search engines (Google, Yandex) don't rank text down for being AI-written. They 
 - Russian: то же для Яндекса — уникальные данные, ответ сразу, без «В этой статье мы рассмотрим…».
 
 ## Texts meant to be cited by AI search
+Only when the user asks for it. Apply these to a few key passages (a definition, a price, a comparison), not to the whole text; the rest stays a text for people.
 AI answer engines (ChatGPT search, Perplexity, Google AI Overviews, Яндекс Нейро) quote short passages that make sense on their own. For web pages that should be cited:
 - **Self-contained answers.** Right after a question, give the answer in 1–2 sentences that are clear without the surrounding text: name the subject instead of "it" or "this".
 - **Exact facts.** Numbers, dates, model names, prices, units. Vague claims don't get quoted.

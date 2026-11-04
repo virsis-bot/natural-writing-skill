@@ -1,5 +1,9 @@
 ## 2026-11-04 (manual)
 
+Added "Priorities" (reader interest first, SEO/AI rules only on request) and "What makes a text interesting". SEO and AI-search sections now apply only when asked.
+
+## 2026-11-04 (manual)
+
 Added a "Texts meant to be cited by AI search" section: self-contained answers, exact facts, question subheadings, comparison tables.
 
 ## 2026-11-04 (manual)
