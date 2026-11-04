@@ -8,3 +8,5 @@ Decide whether the change matters for the skill. It matters when the guide adds 
 If it matters, edit skills/natural-writing/SKILL.md. Keep its structure, style, numbering scheme and length budget; the skill is for writers in English and Russian, so add a Russian equivalent where a natural one exists. Signs that apply only to Wikipedia editing (AfC, templates, user pages) stay out unless they generalize to ordinary prose. Then write a short plain-English summary of the skill changes to CHANGES.md (overwrite the file).
 
 If nothing matters, change no files.
+
+Some sections of SKILL.md do not come from the guide and must stay as they are: "Priorities", "What makes a text interesting", "Match the author's voice", "English specifics", "Russian specifics", "Web and SEO texts", "Texts meant to be cited by AI search". Never let new rules override the "Priorities" order.
