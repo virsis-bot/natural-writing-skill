@@ -18,7 +18,7 @@ fi
 
 rm -f CHANGES.md
 claude -p "$(cat scripts/update_prompt.md)" --model sonnet \
-  --allowedTools "Read,Edit,Write,Glob,Grep" >/dev/null
+  --allowedTools "Read,Edit,Write,Glob,Grep" </dev/null >/dev/null
 
 if git diff --quiet -- skills/; then
   git add source/
