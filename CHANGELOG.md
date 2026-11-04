@@ -1,5 +1,9 @@
 ## 2026-11-04 (manual)
 
+Added a "Texts meant to be cited by AI search" section: self-contained answers, exact facts, question subheadings, comparison tables.
+
+## 2026-11-04 (manual)
+
 Added a "Web and SEO texts" section: own data, answer first, authorship, no templated page series, no keyword stuffing.
 
 ## 2026-11-04 (manual)

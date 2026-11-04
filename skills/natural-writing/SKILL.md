@@ -68,6 +68,14 @@ Search engines (Google, Yandex) don't rank text down for being AI-written. They 
 - **No keyword stuffing.** Use the query phrase where it reads naturally; synonyms and related terms are fine.
 - Russian: то же для Яндекса — уникальные данные, ответ сразу, без «В этой статье мы рассмотрим…».
 
+## Texts meant to be cited by AI search
+AI answer engines (ChatGPT search, Perplexity, Google AI Overviews, Яндекс Нейро) quote short passages that make sense on their own. For web pages that should be cited:
+- **Self-contained answers.** Right after a question, give the answer in 1–2 sentences that are clear without the surrounding text: name the subject instead of "it" or "this".
+- **Exact facts.** Numbers, dates, model names, prices, units. Vague claims don't get quoted.
+- **Questions as subheadings** on longer pages: "How much does X cost", "X vs Y". Use them on long pages only, not in short texts.
+- **Comparisons and specs in a table** when there are several items with the same attributes. That's a table doing real work, not a tiny one.
+- Everything above still applies: a quotable answer written in AI style is still AI style.
+
 ## Chat residue in deliverables
 25. When producing text the user will publish or send, never include assistant talk inside it: "I hope this helps", "Certainly!", "Here is a…", "Let me know if…", "Would you like…", "check before publishing", notes to reviewers.
 26. No unfilled placeholders ([Your Name], 2025-XX-XX, PASTE_URL_HERE). If something is unknown, ask or mark it clearly outside the deliverable.
