@@ -1,5 +1,9 @@
 ## 2026-11-04 (manual)
 
+Added a "Web and SEO texts" section: own data, answer first, authorship, no templated page series, no keyword stuffing.
+
+## 2026-11-04 (manual)
+
 Added from RESEARCH.md: ask for missing facts, match the author's voice, template structure (new item 7), second-tier vocabulary with a note that word lists age, real burstiness, separate English and Russian sections, a two-pass self-audit.
 
 ## 2026-11-04

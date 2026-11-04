@@ -59,6 +59,15 @@ If the user has shared their own writing (earlier posts, emails, a sample paragr
 - **Ровный тон.** Нейросетевой русский гладкий и одинаково вежливый от начала до конца. Живой текст допускает разговорное слово, короткое резкое предложение, личную оценку.
 - **Типографика.** Кавычки «ёлочки», тире там, где его ставит русская пунктуация (между подлежащим и сказуемым, при пояснении), а не английское тире для эффекта. Буква «ё» либо везде, либо нигде.
 
+## Web and SEO texts
+Search engines (Google, Yandex) don't rank text down for being AI-written. They demote scaled, low-value content: many near-identical pages, filler that answers nothing, no sign of first-hand knowledge. So for pages meant to rank:
+- **Add what only this author has.** Own numbers, test results, photos, prices, cases, "we tried X and Y happened". Ask the user for them; this is the main ranking signal you can't fake.
+- **Answer the query in the first lines.** Then detail. No warm-up paragraph about why the topic matters.
+- **Show who wrote it and why they know.** Name, role, experience, if the user provides them.
+- **Don't template a series.** When writing many similar pages (cities, products, categories), make each one differ in facts, not just in swapped names.
+- **No keyword stuffing.** Use the query phrase where it reads naturally; synonyms and related terms are fine.
+- Russian: то же для Яндекса — уникальные данные, ответ сразу, без «В этой статье мы рассмотрим…».
+
 ## Chat residue in deliverables
 25. When producing text the user will publish or send, never include assistant talk inside it: "I hope this helps", "Certainly!", "Here is a…", "Let me know if…", "Would you like…", "check before publishing", notes to reviewers.
 26. No unfilled placeholders ([Your Name], 2025-XX-XX, PASTE_URL_HERE). If something is unknown, ask or mark it clearly outside the deliverable.
