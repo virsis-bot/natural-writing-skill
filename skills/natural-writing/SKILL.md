@@ -107,6 +107,10 @@ AI answer engines (ChatGPT search, Perplexity, Google AI Overviews, Яндекс
 
 ## Final check before delivering
 Write the draft, then audit it as an editor who suspects AI: go through the rules above, note every tell you find, and rewrite those spots. For anything longer than a few paragraphs, do this as a separate pass, not while drafting. Ask:
+- What does each paragraph tell the reader that they didn't know? If nothing, cut it.
+- Could the first paragraph go without loss? If so, start with the second.
+- Is there at least one concrete case (a name, a place, a number, what happened), not only general claims?
+- Pick the dullest paragraph. There always is one, so don't skip this; rewrite it or cut it.
 - Could any sentence apply equally to a different subject? Make it specific or cut it.
 - Are there 3+ words from the vocabulary list in one paragraph? Rewrite.
 - Does any paragraph end by restating its own point? Cut the last sentence.

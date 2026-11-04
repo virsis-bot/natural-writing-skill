@@ -1,5 +1,9 @@
 ## 2026-11-04 (manual)
 
+Final check: four interest checks (new info per paragraph, cut the first paragraph, one concrete case, rewrite the dullest paragraph).
+
+## 2026-11-04 (manual)
+
 Added "Priorities" (reader interest first, SEO/AI rules only on request) and "What makes a text interesting". SEO and AI-search sections now apply only when asked.
 
 ## 2026-11-04 (manual)
