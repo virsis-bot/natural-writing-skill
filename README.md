@@ -5,11 +5,11 @@ Claude skill that helps write prose without the patterns that mark text as AI-ge
 - `skills/natural-writing/SKILL.md` — the skill.
 - `source/article.txt`, `source/state.json` — snapshot of the guide the skill was last checked against.
 - `scripts/check_article.py` — fetches the guide, writes the snapshot and a diff (`source/last-diff.diff`).
-- `.github/workflows/daily-check.yml` — runs every day at 06:00 UTC. If the guide's text changed, Claude reads the diff and decides whether the skill needs an update. Skill changes arrive as a pull request; otherwise only the snapshot is committed.
+- `scripts/daily_update.sh` — daily cron job on the home server (`agent@192.168.1.60`, `~/projects/Claude_code_folder/Natural-writing`). If the guide's text changed, `claude -p` reads the diff (`scripts/update_prompt.md`) and decides whether the skill needs an update. Skill changes are committed to `main` with a summary in `CHANGELOG.md`; otherwise only the snapshot is committed.
 
-## Setup
+## Server setup
 
-Add one repository secret: `ANTHROPIC_API_KEY`, or `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`, uses a Claude subscription).
-Enable "Allow GitHub Actions to create and approve pull requests" in Settings → Actions → General.
-
-Run manually: Actions → "Daily check of Signs of AI writing" → Run workflow.
+- `.env` (not in git) holds `CLAUDE_CODE_OAUTH_TOKEN` from `claude setup-token`.
+- Push goes through the deploy key `~/.ssh/natural_writing_deploy` (host alias `github-natural_writing`).
+- Cron: `15 7 * * * ~/projects/Claude_code_folder/Natural-writing/scripts/daily_update.sh >> ~/projects/Claude_code_folder/Natural-writing/daily.log 2>&1`
+- Manual run: `scripts/daily_update.sh`

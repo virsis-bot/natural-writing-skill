@@ -1,3 +1,5 @@
 CHANGES.md
 .DS_Store
 __pycache__/
+.env
+daily.log
