@@ -5,7 +5,7 @@ description: "Use when writing or editing prose meant for people to read (articl
 
 # Natural writing
 
-Based on Wikipedia's "Signs of AI writing" field guide plus editing practice. The goal is not to disguise text but to write better: specific, plain, accurate, worth reading. The deeper problem behind AI tells is generic, inflated, poorly sourced content. Fix that first.
+Based on Wikipedia's "Signs of AI writing" field guide plus editing practice. The goal is to write better: specific, plain, accurate, worth reading. The deeper problem behind AI tells is generic, inflated content. Fix that first.
 
 ## Priorities
 1. The reader wants to keep reading. A text that is correct but dull has failed.
@@ -19,7 +19,7 @@ Prefer the specific fact over the generic claim. "Inventor of the first train-co
 
 **Facts come from the user or a source, never from you.** Don't invent people, companies, statistics, quotes, product details or the author's experience ("I tried", "we had") to make a text vivid. An invented vignette ("Sarah, a manager in Austin…", «Анна из Казани…») and a round number without a source ("73% of users") are themselves AI tells. If you derive a number, say what it's a share of.
 
-This bans new claims about the world, not imagery. Turning a given fact into a picture is welcome and often the best line in the text ("a second beep on your phone" for "the app sends a notification"). Don't write timidly to stay safe; a careful report is a failure too.
+This bans new claims about the world, not imagery. Turning a given fact into a picture is welcome and often the best line in the text ("a second beep on your phone" for "the app sends a notification"). An image must not promise a result the facts don't give («26 дБ» doesn't mean "you can sleep next to it"). Don't write timidly to stay safe; a careful report is a failure too.
 
 **When facts are missing:** if a missing fact is central and you're in a conversation, ask. Otherwise write from what you have and list the gaps in one line after the deliverable, outside it.
 
@@ -33,7 +33,7 @@ Decide three things: who reads this, the one thing they should take away, and th
 - **Movement.** A problem, then what was tried; a question the text actually answers (not a rhetorical hook like "Ever wondered…?", «Знакомая ситуация?»).
 - **A human voice.** Humor, doubt, an aside, where the author's samples or the situation call for it. Forced humor and confessional asides read as fake.
 - **An ending that does something.** End on what the reader does or decides next (order, reply, which model to pick), on your verdict, or on the last strong fact. Don't restate the text, and don't just stop on the last item either. In an article: one or two sentences, no heading, no list. If the ending walks through the sections again, it's a summary.
-- **Genre.** A post, an email, an article and a product page differ in length, in how directly they address the reader and in how much personal there is. Match the genre.
+- **Genre.** A post, an email, an article and a product page differ in length, address and how personal they are. Match the genre.
 
 ## Match the author's voice
 If the user has shared their own writing (earlier posts, emails, a sample paragraph), match it: sentence length, word choice, punctuation habits, formality, whether they use "I". For a recurring kind of text without a sample, ask once for 2–3 paragraphs they wrote. Their voice beats any rule below; if they write long sentences or use dashes, keep that.
@@ -111,8 +111,8 @@ Classifiers (Pangram, GPTZero, Turnitin, Originality) are trained on model outpu
 - Could the first paragraph go without loss? If so, start with the second.
 - Is there at least one concrete case, and did it come from the user or a source?
 - Find the weakest paragraph. If it adds nothing, cut it; if it does, make it specific.
-- Could any sentence apply equally to a different subject? Make it specific or cut it.
 - Are there 3+ vocabulary-list words, or more than one mirrored pair or punchy fragment, in the text? Rewrite.
+- Does any sentence explain what the text is doing or why you say this, instead of saying it («Поэтому этот разбор начинается с…», "The reason isn't complicated")? Cut it.
 - Does the ending tell the reader what to do or think, without restating?
 - Is formatting (bold, bullets, headings) doing real work, or decorating?
 - Does it sound like the user's samples, if you have them?

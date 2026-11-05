@@ -1,0 +1,86 @@
+[
+{
+"j": 1,
+"task": "1",
+"text1": "D1",
+"text2": "B2-1",
+"model": "opus"
+},
+{
+"j": 2,
+"task": "1",
+"text1": "B2-2",
+"text2": "D2",
+"model": "sonnet"
+},
+{
+"j": 3,
+"task": "1",
+"text1": "D1",
+"text2": "B2-2",
+"model": "sonnet"
+},
+{
+"j": 4,
+"task": "2",
+"text1": "B2-1",
+"text2": "D1",
+"model": "opus"
+},
+{
+"j": 5,
+"task": "2",
+"text1": "D2",
+"text2": "B2-2",
+"model": "sonnet"
+},
+{
+"j": 6,
+"task": "2",
+"text1": "B2-1",
+"text2": "D2",
+"model": "sonnet"
+},
+{
+"j": 7,
+"task": "3",
+"text1": "D1",
+"text2": "B2-1",
+"model": "opus"
+},
+{
+"j": 8,
+"task": "3",
+"text1": "B2-2",
+"text2": "D2",
+"model": "sonnet"
+},
+{
+"j": 9,
+"task": "3",
+"text1": "D1",
+"text2": "B2-2",
+"model": "sonnet"
+},
+{
+"j": 10,
+"task": "4",
+"text1": "B2-1",
+"text2": "D1",
+"model": "opus"
+},
+{
+"j": 11,
+"task": "4",
+"text1": "D2",
+"text2": "B2-2",
+"model": "sonnet"
+},
+{
+"j": 12,
+"task": "4",
+"text1": "B2-1",
+"text2": "D2",
+"model": "sonnet"
+}
+]
