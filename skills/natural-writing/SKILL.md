@@ -19,10 +19,12 @@ Prefer the specific fact over the generic claim. "Inventor of the first train-co
 
 **Facts come from the user or a source, never from you.** Don't invent people, companies, statistics, quotes, product details or the author's experience ("I tried", "we had") to make a text vivid. An invented vignette ("Sarah, a manager in Austin…", «Анна из Казани…») and a round number without a source ("73% of users") are themselves AI tells. If you derive a number, say what it's a share of.
 
+This bans new claims about the world, not imagery. Turning a given fact into a picture is welcome and often the best line in the text ("a second beep on your phone" for "the app sends a notification"). Don't write timidly to stay safe; a careful report is a failure too.
+
 **When facts are missing:** if a missing fact is central and you're in a conversation, ask. Otherwise write from what you have and list the gaps in one line after the deliverable, outside it.
 
 ## Before drafting
-Decide three things: who reads this, the one thing they should take away, and the most unexpected or useful thing in the material. Start near that.
+Decide three things: who reads this, the one thing they should take away, and the most unexpected or useful thing in the material. Start near that. If the material has the reader's problem (a season, a complaint, a pain), a post can start there and bring the product in as the answer, instead of announcing it.
 
 ## What makes a text interesting
 - **A point of view.** Say what you think and why; take a side when there is one.
@@ -30,7 +32,7 @@ Decide three things: who reads this, the one thing they should take away, and th
 - **Something the reader didn't know.** A surprising detail, a counterintuitive result, an honest "it didn't work".
 - **Movement.** A problem, then what was tried; a question the text actually answers (not a rhetorical hook like "Ever wondered…?", «Знакомая ситуация?»).
 - **A human voice.** Humor, doubt, an aside, where the author's samples or the situation call for it. Forced humor and confessional asides read as fake.
-- **An ending that does something.** End on what the reader does or decides next (order, reply, which model to pick), on your verdict, or on the last strong fact. Don't restate the text, and don't just stop on the last item either.
+- **An ending that does something.** End on what the reader does or decides next (order, reply, which model to pick), on your verdict, or on the last strong fact. Don't restate the text, and don't just stop on the last item either. In an article: one or two sentences, no heading, no list. If the ending walks through the sections again, it's a summary.
 - **Genre.** A post, an email, an article and a product page differ in length, in how directly they address the reader and in how much personal there is. Match the genre.
 
 ## Match the author's voice
@@ -59,7 +61,7 @@ If the user has shared their own writing (earlier posts, emails, a sample paragr
 - **Punchy staccato.** One-line paragraphs, fragments for effect ("And it worked. Mostly."), a colon reveal ("The result? Chaos.", «Итог: …»), a punchline closing every paragraph. Russian: «И это работает.», «Спойлер: …».
 
 ## Rhythm and punctuation
-Let sentence length follow the thought: a long sentence where the idea needs qualifying, a short one where the point is short. Don't engineer rhythm; both a metronome of 15–20-word sentences and a manufactured mix of fragments are tells. Use the punctuation the sentence needs, not a quota: no em dashes as a punchline device in English, but in Russian put a dash wherever the rules require it («Главное изменение — залив воды»), and don't twist the sentence to avoid it.
+Let sentence length follow the thought: a long sentence where the idea needs qualifying, a short one where the point is short. Don't engineer rhythm; both a metronome of 15–20-word sentences and a manufactured mix of fragments are tells. Three or more short spec sentences in a row («Шум 26 дБ. Рассчитан на 35 м².») are the same metronome: merge them into one sentence with a point («ночью почти не слышно — 26 дБ») or use a short list. Use the punctuation the sentence needs, not a quota: no em dashes as a punchline device in English, but in Russian put a dash wherever the rules require it («Главное изменение — залив воды»), and don't twist the sentence to avoid it.
 
 ## Formatting: don't do this
 - **Title Case In Headings**, and titles shaped "Catchy phrase: explanation". Use sentence case.
@@ -73,7 +75,7 @@ Let sentence length follow the thought: a long sentence where the idea needs qua
 ## English specifics
 - **Corporate filler.** "In order to", "utilize", "at this point in time", "facilitate", "on a daily basis". Write "to", "use", "now", "help", "daily".
 - **Nominalizations and passive.** "Conduct an analysis", "drive engagement", "it was decided". Use the verb and the actor: "we analyzed", "people started commenting", "we decided".
-- **Signposting.** "Let's dive in", "let's break it down", "the key takeaway", "it's worth noting", "Here's why:", "Imagine…", "In a world where…", "Whether you're X or Y…". "Here's the thing" or "honestly" at most once.
+- **Signposting.** "Let's dive in", "let's break it down", "the key takeaway", "it's worth noting", "Here's why:", "Imagine…", "In a world where…", "Whether you're X or Y…", "Put the other way round", "This isn't a hunch", "You might reasonably ask why…". "Here's the thing" or "honestly" at most once.
 - **Even tone.** AI English stays upbeat and equally polite throughout. Real writing allows a plain opinion, a dry aside, contractions where the register permits.
 - **Consistency.** US or UK spelling, serial comma, quote style: pick one and keep it.
 
@@ -82,7 +84,7 @@ Let sentence length follow the thought: a long sentence where the idea needs qua
 - **Отглагольные существительные и цепочки родительного.** «Повышение эффективности работы отдела продаж компании». Лучше глагол и конкретика: «перестроили закупку, и заказ приходит за два дня вместо пяти».
 - **Пассив и безличность.** «Было принято решение», «осуществляется доставка» → «мы решили», «доставляем».
 - **«Позволяет», «обеспечивает», «способствует».** «Сервис позволяет экономить время» → «с сервисом вы тратите меньше времени».
-- **Связки-штампы.** «Стоит отметить», «важно понимать», «не секрет, что», «давайте разберёмся», «давайте честно», «и вот тут начинается самое интересное», «звучит знакомо?», «представьте:», «простыми словами», «по сути» и «на самом деле» в каждом абзаце, «в современном мире».
+- **Связки-штампы.** «Стоит отметить», «важно понимать», «не секрет, что», «давайте разберёмся», «давайте честно», «и вот тут начинается самое интересное», «звучит знакомо?», «представьте:», «здесь есть деталь, которую легко упустить», «и это ещё не всё», «это пять минут, и…», «удобная мелочь», «простыми словами», «по сути» и «на самом деле» в каждом абзаце, «в современном мире».
 - **Кальки.** «Адресовать проблему», «в конце дня», лишние «свой/его» («открыл свой ноутбук»), «является» и «который» цепочками, новое в начале фразы по английской схеме вместо конца.
 - **Ровный тон.** Нейросетевой русский гладкий и одинаково вежливый. Живой текст допускает разговорное слово, резкое короткое предложение, личную оценку.
 - **Типографика.** «Ёлочки», тире по правилам русской пунктуации (не дефис и не английское тире без пробелов). «Ё» либо везде, либо нигде, но в «всё/все» и подобных — всегда. «Вы» с заглавной только в личном письме.

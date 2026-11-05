@@ -1,0 +1,194 @@
+[
+{
+"j": 1,
+"task": "1",
+"cmp": "C-vs-B",
+"text1": "C1",
+"text2": "B",
+"model": "opus"
+},
+{
+"j": 2,
+"task": "1",
+"cmp": "C-vs-B",
+"text1": "B",
+"text2": "C1",
+"model": "sonnet"
+},
+{
+"j": 3,
+"task": "1",
+"cmp": "C-vs-B",
+"text1": "C2",
+"text2": "B",
+"model": "sonnet"
+},
+{
+"j": 4,
+"task": "1",
+"cmp": "C-vs-A",
+"text1": "A",
+"text2": "C2",
+"model": "opus"
+},
+{
+"j": 5,
+"task": "1",
+"cmp": "C-vs-A",
+"text1": "C2",
+"text2": "A",
+"model": "sonnet"
+},
+{
+"j": 6,
+"task": "1",
+"cmp": "C-vs-A",
+"text1": "A",
+"text2": "C1",
+"model": "sonnet"
+},
+{
+"j": 7,
+"task": "2",
+"cmp": "C-vs-B",
+"text1": "C2",
+"text2": "B",
+"model": "opus"
+},
+{
+"j": 8,
+"task": "2",
+"cmp": "C-vs-B",
+"text1": "B",
+"text2": "C2",
+"model": "sonnet"
+},
+{
+"j": 9,
+"task": "2",
+"cmp": "C-vs-B",
+"text1": "C1",
+"text2": "B",
+"model": "sonnet"
+},
+{
+"j": 10,
+"task": "2",
+"cmp": "C-vs-A",
+"text1": "A",
+"text2": "C1",
+"model": "opus"
+},
+{
+"j": 11,
+"task": "2",
+"cmp": "C-vs-A",
+"text1": "C1",
+"text2": "A",
+"model": "sonnet"
+},
+{
+"j": 12,
+"task": "2",
+"cmp": "C-vs-A",
+"text1": "A",
+"text2": "C2",
+"model": "sonnet"
+},
+{
+"j": 13,
+"task": "3",
+"cmp": "C-vs-B",
+"text1": "C1",
+"text2": "B",
+"model": "opus"
+},
+{
+"j": 14,
+"task": "3",
+"cmp": "C-vs-B",
+"text1": "B",
+"text2": "C1",
+"model": "sonnet"
+},
+{
+"j": 15,
+"task": "3",
+"cmp": "C-vs-B",
+"text1": "C2",
+"text2": "B",
+"model": "sonnet"
+},
+{
+"j": 16,
+"task": "3",
+"cmp": "C-vs-A",
+"text1": "A",
+"text2": "C2",
+"model": "opus"
+},
+{
+"j": 17,
+"task": "3",
+"cmp": "C-vs-A",
+"text1": "C2",
+"text2": "A",
+"model": "sonnet"
+},
+{
+"j": 18,
+"task": "3",
+"cmp": "C-vs-A",
+"text1": "A",
+"text2": "C1",
+"model": "sonnet"
+},
+{
+"j": 19,
+"task": "4",
+"cmp": "C-vs-B",
+"text1": "C2",
+"text2": "B",
+"model": "opus"
+},
+{
+"j": 20,
+"task": "4",
+"cmp": "C-vs-B",
+"text1": "B",
+"text2": "C2",
+"model": "sonnet"
+},
+{
+"j": 21,
+"task": "4",
+"cmp": "C-vs-B",
+"text1": "C1",
+"text2": "B",
+"model": "sonnet"
+},
+{
+"j": 22,
+"task": "4",
+"cmp": "C-vs-A",
+"text1": "A",
+"text2": "C1",
+"model": "opus"
+},
+{
+"j": 23,
+"task": "4",
+"cmp": "C-vs-A",
+"text1": "C1",
+"text2": "A",
+"model": "sonnet"
+},
+{
+"j": 24,
+"task": "4",
+"cmp": "C-vs-A",
+"text1": "A",
+"text2": "C2",
+"model": "sonnet"
+}
+]

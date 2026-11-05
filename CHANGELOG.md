@@ -1,3 +1,7 @@
+## 2026-11-05 (manual)
+
+After A/B round 2: article endings without recap, imagery allowed (only new claims banned), posts may start from the reader's situation, new stock phrases, spec-sentence chains.
+
 ## 2026-11-04 (manual)
 
 Final check: four interest checks (new info per paragraph, cut the first paragraph, one concrete case, rewrite the dullest paragraph).
