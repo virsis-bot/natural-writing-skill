@@ -1,6 +1,6 @@
 # natural-writing
 
-Скилл для Claude: помогает писать и редактировать тексты на русском и английском так, чтобы их было интересно читать и они не выглядели написанными ИИ. Основа — справочник [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), дополненный правилами редактуры. Сервер каждый день сверяет скилл со справочником.
+Скилл для Claude: помогает писать и редактировать тексты на русском и английском так, чтобы их было интересно читать и они не выглядели написанными ИИ. Основа — справочник [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), дополненный правилами редактуры. Сервер раз в неделю сверяет скилл со справочником.
 
 ## Установка
 
@@ -59,15 +59,15 @@ cd ~/natural-writing-skill/skills && zip -r ~/natural-writing.zip natural-writin
 - `RESEARCH.md` — аналоги и что известно о детекторах.
 - `reviews/` — независимые ревью и A/B-тесты с текстами.
 - `source/` — снимок справочника, с которым скилл сверялся последним.
-- `scripts/` — ежедневное обновление.
+- `scripts/` — еженедельное обновление.
 
-## Ежедневное обновление
+## Еженедельное обновление
 
-Крон на домашнем сервере (`agent@192.168.1.60`, папка `~/projects/Claude_code_folder/Natural-writing`) каждый день в 07:15 UTC запускает `scripts/daily_update.sh`:
+Крон на домашнем сервере (`agent@192.168.1.60`, папка `~/projects/Claude_code_folder/Natural-writing`) каждый понедельник в 07:15 UTC запускает `scripts/daily_update.sh`:
 
 1. `check_article.py` скачивает справочник и сравнивает со снимком в `source/`.
 2. Если текст изменился, `claude -p` читает разницу по инструкции `update_prompt.md` и решает, нужно ли менять скилл.
-3. `validate_skill.py` отклоняет правку, если она меняет защищённые разделы или `references/` либо выходит за 2400 слов. Тогда изменения откатываются, и на следующий день попытка повторяется.
+3. `validate_skill.py` отклоняет правку, если она меняет защищённые разделы или `references/` либо выходит за 2400 слов. Тогда изменения откатываются, и попытка повторяется на следующей неделе.
 4. Правка скилла коммитится в `main` с записью в `CHANGELOG.md`. Если скилл менять не нужно, коммитится только снимок.
 
 Лог лежит в `daily.log` на сервере. Запуск вручную:
@@ -80,4 +80,4 @@ ssh agent@192.168.1.60 '~/projects/Claude_code_folder/Natural-writing/scripts/da
 
 - `.env` (не в git) содержит `CLAUDE_CODE_OAUTH_TOKEN` из `claude setup-token`.
 - Пуш идёт через deploy-ключ `~/.ssh/natural_writing_deploy` (алиас `github-natural_writing`).
-- Строка крона: `15 7 * * * ~/projects/Claude_code_folder/Natural-writing/scripts/daily_update.sh >> ~/projects/Claude_code_folder/Natural-writing/daily.log 2>&1`
+- Строка крона: `15 7 * * 1 ~/projects/Claude_code_folder/Natural-writing/scripts/daily_update.sh >> ~/projects/Claude_code_folder/Natural-writing/daily.log 2>&1`

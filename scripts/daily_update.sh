@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Daily run on the home server: fetch the guide, let Claude update the skill, push.
+# Weekly run on the home server: fetch the guide, let Claude update the skill, push.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -21,7 +21,7 @@ claude -p "$(cat scripts/update_prompt.md)" --model sonnet \
   --allowedTools "Read,Edit,Write,Glob,Grep" </dev/null >/dev/null
 
 if ! python3 scripts/validate_skill.py; then
-  # Throw away the update and the snapshot so tomorrow's run retries it
+  # Throw away the update and the snapshot so the next run retries it
   git checkout -q -- skills/ source/
   git clean -fdq -- skills/
   rm -f CHANGES.md
