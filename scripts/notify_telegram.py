@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Send the text from argv[1] to Telegram. Uses TG_BOT_TOKEN and TG_CHAT_ID."""
+"""Send the text from argv[1] to Telegram. Uses TG_BOT_TOKEN, TG_CHAT_ID and TG_THREAD_ID."""
 import json
 import os
 import sys
@@ -13,6 +13,7 @@ def main():
     token = os.environ["TG_BOT_TOKEN"]
     payload = {
         "chat_id": os.environ["TG_CHAT_ID"],
+        "message_thread_id": int(os.environ["TG_THREAD_ID"]),
         "text": sys.argv[1][:LIMIT],
         "disable_web_page_preview": True,
     }

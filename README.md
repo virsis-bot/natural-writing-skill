@@ -77,7 +77,7 @@ ssh agent@192.168.1.60 '~/projects/Claude_code_folder/Natural-writing/scripts/da
 
 Настройка на сервере:
 
-- `.env` (не в git) содержит `CLAUDE_CODE_OAUTH_TOKEN` из `claude setup-token`, а также `TG_BOT_TOKEN` и `TG_CHAT_ID` для уведомлений.
+- `.env` (не в git) содержит `CLAUDE_CODE_OAUTH_TOKEN` из `claude setup-token`, а также `TG_BOT_TOKEN`, `TG_CHAT_ID` и `TG_THREAD_ID` для уведомлений (бот @servant072026_bot, только отправка).
 - Пуш идёт через deploy-ключ `~/.ssh/natural_writing_deploy` (алиас `github-natural_writing`).
 - Строка крона: `15 7 * * 1 ~/projects/Claude_code_folder/Natural-writing/scripts/daily_update.sh >> ~/projects/Claude_code_folder/Natural-writing/daily.log 2>&1`
 
