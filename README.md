@@ -1,18 +1,83 @@
-# natural-writing skill
+# natural-writing
 
-Claude skill that helps write prose without the patterns that mark text as AI-generated. Built from Wikipedia's field guide [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing).
+Скилл для Claude: помогает писать и редактировать тексты на русском и английском так, чтобы их было интересно читать и они не выглядели написанными ИИ. Основа — справочник [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), дополненный правилами редактуры. Сервер каждый день сверяет скилл со справочником.
 
-- `skills/natural-writing/SKILL.md` — the skill.
-- `source/article.txt`, `source/state.json` — snapshot of the guide the skill was last checked against.
-- `scripts/check_article.py` — fetches the guide, writes the snapshot and a diff (`source/last-diff.diff`).
-- `skills/natural-writing/references/web.md` — SEO, e-commerce and AI-search rules, loaded only for web pages.
-- `scripts/validate_skill.py` — rejects an automatic update that touches protected sections, `references/` or exceeds 2400 words.
-- `reviews/` — independent reviews and the blind A/B test (2026-11-04).
-- `scripts/daily_update.sh` — daily cron job on the home server (`agent@192.168.1.60`, `~/projects/Claude_code_folder/Natural-writing`). If the guide's text changed, `claude -p` reads the diff (`scripts/update_prompt.md`) and decides whether the skill needs an update. Skill changes are committed to `main` with a summary in `CHANGELOG.md`; otherwise only the snapshot is committed.
+## Установка
 
-## Server setup
+Claude Code, с обновлением через `git pull`:
 
-- `.env` (not in git) holds `CLAUDE_CODE_OAUTH_TOKEN` from `claude setup-token`.
-- Push goes through the deploy key `~/.ssh/natural_writing_deploy` (host alias `github-natural_writing`).
-- Cron: `15 7 * * * ~/projects/Claude_code_folder/Natural-writing/scripts/daily_update.sh >> ~/projects/Claude_code_folder/Natural-writing/daily.log 2>&1`
-- Manual run: `scripts/daily_update.sh`
+```bash
+git clone https://github.com/virsis-bot/natural-writing-skill.git ~/natural-writing-skill
+```
+
+```bash
+ln -s ~/natural-writing-skill/skills/natural-writing ~/.claude/skills/natural-writing
+```
+
+Claude.ai и приложение Claude: соберите архив и загрузите его в настройках, в разделе скиллов. Если там уже есть старая версия, сначала удалите её. Автоматически эта копия не обновляется.
+
+```bash
+cd ~/natural-writing-skill/skills && zip -r ~/natural-writing.zip natural-writing
+```
+
+## Как пользоваться
+
+Скилл включается сам, когда вы просите написать или отредактировать текст: статью, пост, письмо, рассылку, карточку товара. Для кода, коммитов и документации API он не предназначен. Можно вызвать и явно: `/natural-writing`.
+
+Примеры запросов:
+
+- «Напиши пост в Telegram о новом увлажнителе. Факты: 5,5 л, залив сверху, 26 дБ, 6 990 ₽»
+- «Отредактируй этот текст, убери признаки нейросети: …»
+- «Ответь клиенту на жалобу, вот его письмо и что случилось: …»
+- «Напиши статью для блога магазина, она должна ранжироваться в Яндексе» (подключит правила из `references/web.md`)
+
+Как получить хороший результат:
+
+- **Давайте факты.** Цифры, имена, что случилось на самом деле. Скилл запрещает их выдумывать: чего не хватает, он спросит или перечислит после текста.
+- **Покажите свой текст.** 2–3 абзаца, написанных вами, и Claude подстроится под ваш стиль.
+- **Скажите, если текст для сайта.** Правила SEO и ИИ-поиска работают только по такой просьбе.
+- **Вычитайте результат сами.** Проверьте факты и обещания покупателю, перепишите начало своими словами.
+
+## Что скилл не умеет
+
+Он не гарантирует прохождение детекторов вроде Pangram, GPTZero и Turnitin: правила помогают против читателей и ИИ-судей, а не против обученных классификаторов. Оценку снижает реальный вклад автора: его факты, фразы и правки. Google заявляет, что не понижает текст только за то, что его написал ИИ; у Яндекса такого публичного заявления нет. Подробности в `references/web.md`.
+
+## Насколько это работает
+
+Три раунда слепых тестов на 4 заданиях, отчёты в `reviews/`:
+
+- со скиллом текст интереснее, чем без него, в 10 из 12 оценок, и реже похож на ИИ;
+- последняя версия против более ранней: по интересу почти ничья (5:7), но на ИИ она похожа чаще (9:2).
+
+Судьями были модели Claude, живых читателей пока не было. Последние правки сделаны по этим же заданиям, поэтому результат на других текстах может отличаться.
+
+## Что где лежит
+
+- `skills/natural-writing/SKILL.md` — сам скилл.
+- `skills/natural-writing/references/web.md` — SEO, карточки товаров и ИИ-поиск, читается только для страниц сайта.
+- `CHANGELOG.md` — история изменений скилла.
+- `RESEARCH.md` — аналоги и что известно о детекторах.
+- `reviews/` — независимые ревью и A/B-тесты с текстами.
+- `source/` — снимок справочника, с которым скилл сверялся последним.
+- `scripts/` — ежедневное обновление.
+
+## Ежедневное обновление
+
+Крон на домашнем сервере (`agent@192.168.1.60`, папка `~/projects/Claude_code_folder/Natural-writing`) каждый день в 07:15 UTC запускает `scripts/daily_update.sh`:
+
+1. `check_article.py` скачивает справочник и сравнивает со снимком в `source/`.
+2. Если текст изменился, `claude -p` читает разницу по инструкции `update_prompt.md` и решает, нужно ли менять скилл.
+3. `validate_skill.py` отклоняет правку, если она меняет защищённые разделы или `references/` либо выходит за 2400 слов. Тогда изменения откатываются, и на следующий день попытка повторяется.
+4. Правка скилла коммитится в `main` с записью в `CHANGELOG.md`. Если скилл менять не нужно, коммитится только снимок.
+
+Лог лежит в `daily.log` на сервере. Запуск вручную:
+
+```bash
+ssh agent@192.168.1.60 '~/projects/Claude_code_folder/Natural-writing/scripts/daily_update.sh'
+```
+
+Настройка на сервере:
+
+- `.env` (не в git) содержит `CLAUDE_CODE_OAUTH_TOKEN` из `claude setup-token`.
+- Пуш идёт через deploy-ключ `~/.ssh/natural_writing_deploy` (алиас `github-natural_writing`).
+- Строка крона: `15 7 * * * ~/projects/Claude_code_folder/Natural-writing/scripts/daily_update.sh >> ~/projects/Claude_code_folder/Natural-writing/daily.log 2>&1`
