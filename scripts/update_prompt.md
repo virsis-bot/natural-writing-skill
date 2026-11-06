@@ -16,4 +16,4 @@ Rules for edits:
 - Add a Russian equivalent where a natural one exists.
 - Never add a rule that conflicts with the "Priorities" section.
 
-If you edit, write a short plain-English summary of the changes to CHANGES.md (overwrite the file). If nothing matters, change no files.
+If you edit, write a short summary of the changes in Russian to CHANGES.md (overwrite the file), plain text, no headings. If nothing matters, change no files.
