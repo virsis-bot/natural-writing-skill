@@ -26,6 +26,7 @@ if ! python3 scripts/validate_skill.py; then
   git clean -fdq -- skills/
   rm -f CHANGES.md
   echo "update rejected"
+  python3 scripts/notify_telegram.py "natural-writing: автообновление скилла отклонено проверкой. Подробности в daily.log на сервере." || true
   exit 1
 fi
 
@@ -34,11 +35,18 @@ if git diff --quiet -- skills/; then
   git commit -qm "Update article snapshot (no skill changes)"
   echo "snapshot only"
 else
-  summary=$(cat CHANGES.md 2>/dev/null || echo "Update from Wikipedia guide")
-  { printf '## %s\n\n%s\n\n' "$(date +%F)" "$summary"; cat CHANGELOG.md 2>/dev/null; } > CHANGELOG.tmp
-  mv CHANGELOG.tmp CHANGELOG.md
-  git add skills/ source/ CHANGELOG.md
-  git commit -qm "Update natural-writing skill from Wikipedia guide" -m "$summary"
-  echo "skill updated"
+  summary=$(cat CHANGES.md 2>/dev/null || echo "Обновление по справочнику Википедии.")
+  version=$(python3 scripts/add_version.py "$summary")
+  git add skills/ source/ README.md
+  git commit -qm "Update natural-writing skill to $version from Wikipedia guide" -m "$summary"
+  echo "skill updated: $version"
 fi
 git push -q
+
+if [ -n "${version:-}" ]; then
+  python3 scripts/notify_telegram.py "natural-writing $version: скилл обновлён
+
+$summary
+
+https://github.com/virsis-bot/natural-writing-skill#история-версий" || true
+fi
