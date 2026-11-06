@@ -6,12 +6,23 @@ cd "$(dirname "$0")/.."
 [ -f .env ] && set -a && . ./.env && set +a
 export PATH="$HOME/.local/bin:$PATH"
 
+on_error() {
+  # Without this rollback the changed snapshot stays on disk and the next run sees no changes
+  git checkout -q -- skills/ source/ README.md || true
+  git clean -fdq -- skills/ || true
+  rm -f CHANGES.md
+  echo "failed at line $1"
+  python3 scripts/notify_telegram.py "natural-writing: проверка статьи упала (строка $1 в daily_update.sh). Попытка повторится в следующий запуск, подробности в daily.log на сервере." || true
+}
+trap 'on_error $LINENO' ERR
+
 echo "== $(date -Is)"
 git pull --ff-only -q
 
 changed=$(GITHUB_OUTPUT=/dev/stdout python3 scripts/check_article.py | sed -n 's/^changed=//p')
 if [ "$changed" != "true" ]; then
   git checkout -q -- source/state.json
+  git push -q
   echo "no text changes"
   exit 0
 fi
