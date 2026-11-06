@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SKILL = "skills/natural-writing/SKILL.md"
-MAX_WORDS = 2400
+MAX_WORDS = 2600
 EDITABLE = {
     "Content: don't do this",
     "Language: don't do this",

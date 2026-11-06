@@ -9,7 +9,7 @@ export PATH="$HOME/.local/bin:$PATH"
 on_error() {
   # Without this rollback the changed snapshot stays on disk and the next run sees no changes
   git checkout -q -- skills/ source/ README.md || true
-  git clean -fdq -- skills/ || true
+  git clean -fdq -- skills/ source/ || true
   rm -f CHANGES.md
   echo "failed at line $1"
   python3 scripts/notify_telegram.py "natural-writing: проверка статьи упала (строка $1 в daily_update.sh). Попытка повторится в следующий запуск, подробности в daily.log на сервере." || true
@@ -34,7 +34,7 @@ claude -p "$(cat scripts/update_prompt.md)" --model sonnet \
 if ! python3 scripts/validate_skill.py; then
   # Throw away the update and the snapshot so the next run retries it
   git checkout -q -- skills/ source/
-  git clean -fdq -- skills/
+  git clean -fdq -- skills/ source/
   rm -f CHANGES.md
   echo "update rejected"
   python3 scripts/notify_telegram.py "natural-writing: автообновление скилла отклонено проверкой. Подробности в daily.log на сервере." || true

@@ -11,7 +11,7 @@ You may edit only these sections of SKILL.md: "Content: don't do this", "Languag
 
 Rules for edits:
 - Change only what the guide change requires. Don't rephrase unaffected text.
-- SKILL.md must stay under 2400 words. When adding, shorten or merge something else in the same section.
+- SKILL.md must stay under 2600 words. When adding, shorten or merge something else in the same section.
 - The vocabulary list stays at about 30 English words; replace rather than append.
 - Add a Russian equivalent where a natural one exists.
 - Never add a rule that conflicts with the "Priorities" section.
