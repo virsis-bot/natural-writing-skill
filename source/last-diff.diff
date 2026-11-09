@@ -1,0 +1,28 @@
+--- rev 1383697236
++++ rev 1384534594
+@@ -2,5 +2,5 @@
+ Moreover, this list is descriptive, not prescriptive; it consists of observations, not rules. Advice about formatting or language to avoid can be found in the policies and guidelines and the Manual of Style, but does not belong on this page. The patterns listed here are also only potential signs of a problem, not the problem itself. While many of these issues are immediately obvious and easy to fix—e.g., excessive boldface, broken markup, citation style quirks—they can point to less outwardly visible problems that carry much more serious policy risks. Please do not merely treat these signs as the problems to be fixed; that could just make detection harder. The actual problems are those deeper concerns, so make sure to address them, either yourself or by flagging them, per the relevant guide.
+ The speedy deletion policy criterion G15 (Unambiguously LLM-generated pages) lists some signs of AI writing, but is limited to the most objective ones. The remaining signs covered here are not sufficient on their own for speedy deletion.
+-As of October 2026, the most common signs of newly AI-generated text on Wikipedia (besides the unambiguous indicators above) are Markdown presence, AI edit summaries, hedging disclaimers about source availability and usage, vague expression of connection or association, and undue emphasis on identification by primary sources.
++As of October 2026, the most common signs of newly AI-generated text on Wikipedia (besides the unambiguous indicators above) are Markdown, AI edit summaries, hedging disclaimers about source availability and usage, vague expression of connection or association, and undue emphasis on identification by primary sources.
+ 
+ 
+@@ -82,5 +82,5 @@
+ 
+ === "Awards and recognition" section ===
+-Section or subsection headers in the format of "X and Y" are common in (but not exclusive to) AI generated articles. An "Awards and recognition" section is particularly common (indeed, also simply a "Recognition" section). This is a manifestation of AI-generated text's undue and particular focus on legacy and trends and its tendency to vaguely allude to "coverage" or "recognition" of the subject by various outlets.
++Section or subsection headers in the format of "X and Y" are common in (but not exclusive to) AI-generated articles. An "Awards and recognition" section is particularly common (indeed, also simply a "Recognition" section). This is a manifestation of AI-generated text's undue and particular focus on legacy and trends and its tendency to vaguely allude to "coverage" or "recognition" of the subject by various outlets.
+ While human editors may also include sections about a subject's legacy or impact on the world or their industry, the specific wording of "Awards and recognition" is nearly ubiquitous in AI generated articles, and much more common than in human writing even when comparing against articles tagged as containing promotional content.
+ 
+@@ -427,7 +427,10 @@
+ === Biases in content ===
+ 
++Bias occurs in LLMs based upon what the LLM was trained to do or the training data the LLM trained upon. One reason LLMs are biased is their training data (e.g. an LLM's bias being skewed towards occidental countries due to training on data primarily originating from western sources). Many other factors play role, such as the manner the LLM model was designed in, or their systems of prioritization. Another factor may be AI hallucinations from less knowledge of a lesser-spoken and used vernacular (such as the Azerbaijani language).
++
+ 
+ ==== Pro-authoritarian bias ====
+-Even large American frontier AI models have for a number of prompts (as of 2026) a pro-authoritarian bias, due in part to how it is trained on the entirety of the internet (and does not exclude unreliable sources on political topics such as propaganda from state media). Model makers also cite safety for their users in authoritarian countries as another reason. Chinese language responses are also more authoritarian than English-language ones, for example. Models were also more likely to criticize governments in freer countries than more repressive regimes, sometimes citing safety concerns.
++
++Even large American frontier LLM models have for a number of prompts (as of 2026) a pro-authoritarian bias, due in part to how it is trained on the entirety of the internet (and does not exclude unreliable sources on political topics such as propaganda from state media). Model makers also cite safety for their users in authoritarian countries as another reason. Chinese language responses are also more authoritarian than English-language ones, for example. Models were also more likely to criticize governments in freer countries than more repressive regimes, sometimes citing safety concerns.
+ 
+ 
