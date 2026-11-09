@@ -24,6 +24,7 @@ if [ "$changed" != "true" ]; then
   git checkout -q -- source/state.json
   git push -q
   echo "no text changes"
+  python3 scripts/notify_telegram.py "natural-writing: статья проверена, изменений нет." || true
   exit 0
 fi
 
@@ -45,6 +46,7 @@ if git diff --quiet -- skills/; then
   git add source/
   git commit -qm "Update article snapshot (no skill changes)"
   echo "snapshot only"
+  snapshot_only=1
 else
   summary=$(cat CHANGES.md 2>/dev/null || echo "Обновление по справочнику Википедии.")
   version=$(python3 scripts/add_version.py "$summary")
@@ -54,6 +56,9 @@ else
 fi
 git push -q
 
+if [ -n "${snapshot_only:-}" ]; then
+  python3 scripts/notify_telegram.py "natural-writing: статья изменилась, но скилл править не нужно." || true
+fi
 if [ -n "${version:-}" ]; then
   python3 scripts/notify_telegram.py "natural-writing $version: скилл обновлён
 
