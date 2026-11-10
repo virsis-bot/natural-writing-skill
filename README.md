@@ -62,24 +62,18 @@ cd ~/natural-writing-skill/skills && zip -r ~/natural-writing.zip natural-writin
 
 ## Еженедельное обновление
 
-Крон на домашнем сервере (`agent@192.168.1.60`, папка `~/projects/Claude_code_folder/Natural-writing`) каждый понедельник в 07:15 UTC запускает `scripts/daily_update.sh`:
+Крон на сервере каждый понедельник в 07:15 UTC запускает `scripts/daily_update.sh` из клона этого репозитория:
 
 1. `check_article.py` скачивает справочник и сравнивает со снимком в `source/`.
 2. Если текст изменился, `claude -p` читает разницу по инструкции `update_prompt.md` и решает, нужно ли менять скилл.
 3. `validate_skill.py` отклоняет правку, если она меняет защищённые разделы или `references/` либо выходит за 2600 слов. Тогда изменения откатываются, и попытка повторяется на следующей неделе.
 4. Правка скилла коммитится в `main`, в раздел «История версий» этого README добавляется новая версия, а в Telegram приходит сообщение с описанием правки. Если скилл менять не нужно, коммитится только снимок. Короткое сообщение приходит после каждой проверки, даже если ничего не изменилось: по нему видно, что сервер жив. Об отклонённой правке Telegram тоже сообщит.
 
-Лог лежит в `daily.log` на сервере. Запуск вручную:
+Настройка на своём сервере:
 
-```bash
-ssh agent@192.168.1.60 '~/projects/Claude_code_folder/Natural-writing/scripts/daily_update.sh'
-```
-
-Настройка на сервере:
-
-- `.env` (не в git) содержит `CLAUDE_CODE_OAUTH_TOKEN` из `claude setup-token`, а также `TG_BOT_TOKEN`, `TG_CHAT_ID` и `TG_THREAD_ID` для уведомлений (бот @servant072026_bot, только отправка).
-- Пуш идёт через deploy-ключ `~/.ssh/natural_writing_deploy` (алиас `github-natural_writing`).
-- Строка крона: `15 7 * * 1 ~/projects/Claude_code_folder/Natural-writing/scripts/daily_update.sh >> ~/projects/Claude_code_folder/Natural-writing/daily.log 2>&1`
+- `.env` в корне клона (не в git): `CLAUDE_CODE_OAUTH_TOKEN` из `claude setup-token`, а для уведомлений `TG_BOT_TOKEN`, `TG_CHAT_ID` и `TG_THREAD_ID`. Боту достаточно права отправлять сообщения.
+- Для пуша — deploy-ключ с правом записи в этот репозиторий.
+- Строка крона, где `<repo>` — путь к клону: `15 7 * * 1 <repo>/scripts/daily_update.sh >> <repo>/daily.log 2>&1`. Запуск вручную — тот же скрипт.
 
 ## История версий
 
