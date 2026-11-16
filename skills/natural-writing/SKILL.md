@@ -43,7 +43,7 @@ If the user has shared their own writing (earlier posts, emails, a sample paragr
 - **Bragging about coverage.** Don't list outlets a subject "was featured in" or say "maintains an active social media presence". Summarize what sources actually say.
 - **Tacked-on analysis.** "-ing" commentary at the end of a sentence: "highlighting its importance", "underscoring", "reflecting", "fostering", "contributing to". Russian: «подчёркивая важность», «что свидетельствует о…».
 - **Promotional tone.** "Vibrant", "rich", "nestled", "in the heart of", "boasts", "groundbreaking", "renowned", "diverse array". Russian: «уникальный», «живописный», «богатое наследие», «настоящая жемчужина», «широкий ассортимент».
-- **Vague connections.** Write "was CEO of X", not "was associated with leadership of X".
+- **Vague connections.** Write "was CEO of X", not "was associated with leadership of X". Don't place a subject amid broader "debates" or claim it "sparked discussions about X, Y, and Z" without a source. Russian: «вызвал дискуссии о…».
 - **Weasel attributions.** "Experts argue", "observers note", "several sources" unless you name them and there really are several.
 - **Template structure.** Every text as intro → list of points → conclusion, or a section per parameter. Start with the point and let the order follow the material. A short email or post needs no headings; a short list of 3–5 specs inside a prose post is fine.
 - **Formulaic endings.** "Despite its successes, X faces challenges…" plus an upbeat forecast; "Challenges and Future Outlook" by reflex; a closing question like "What will you build?".
